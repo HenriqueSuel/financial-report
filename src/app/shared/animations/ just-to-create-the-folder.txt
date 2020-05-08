@@ -1,0 +1,3 @@
+Essa pasta serve para criar animacoes.
+
+Ex: Uma animacao de rota ou de componente. 
