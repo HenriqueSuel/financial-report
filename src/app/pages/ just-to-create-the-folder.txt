@@ -1,0 +1,7 @@
+Essa pasta serve para os component de pagina 
+
+Ex: Home
+Login
+Cadastro
+Perfil 
+etc..
