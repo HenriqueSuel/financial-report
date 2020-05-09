@@ -1,23 +1,23 @@
 <section class="container">
-        <div class="card">
-            <div class="card__header">
-                <h1>Financial Report</h1>
-            </div>
-            <div class="card__body">
-                <form class="form">
-                    <div class="form_group">
-                        <label for="">Usuario</label>
-                        <input type="text" placeholder="Ex: email@hotmail.com">
-                    </div>
-                    <div class="form_group">
-                        <label for="">Senha</label>
-                        <input type="password" placeholder="Senha">
-                    </div>
-                </form>
+    <div class="card">
+        <div class="card__header">
+            <h1>Financial Report</h1>
+        </div>
+        <form class="form-horizontal" [formGroup]="formUserRegister" (ngSubmit)="submitForm()">
+        <div class="card__body">
+                <div class="form_group">
+                    <label for="">Usuario</label>
+                    <input type="text" placeholder="Ex: email@hotmail.com" formControlName="email">
+                </div>
+                <div class="form_group">
+                    <label for="">Senha</label>
+                    <input type="password" placeholder="Senha" formControlName="password">
+                </div>
             </div>
             <div class="card__footer">
-                <button type="submit" id="login-button">Login</button>
+                <button type="submit" id="login-button" [disabled]="!formUserRegister.valid" >Login</button>
             </div>
-        </div>
+        </form>
+    </div>
     <app-bubbles></app-bubbles>
 </section>
