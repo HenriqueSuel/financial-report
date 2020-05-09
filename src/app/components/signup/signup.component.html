@@ -1,1 +1,38 @@
-<p>signup works!</p>
+<h1>Página de cadastro</h1>
+<section class="container">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <div id="signup">
+            <p><label for="name"> Primeiro nome: </label>
+                <input class="input" type="text" value="" id="name" placeholder="Digite seu nome" name="name"
+                    [(ngModel)]="user.name" required #nome="ngModel"></p>
+            <!--iv>
+                        Created to see the 
+                        {{ nome.className }}
+                    </div-->
+            <div *ngIf="nullName">
+                Nome é obrigatório
+            </div>
+            <p><label for="surname"> Sobrenome: </label>
+                <input class="input" type="text" value="" id="surname" placeholder="Digite seu sobrenome" name="surname"
+                    [(ngModel)]="user.surname" required></p>
+            <div *ngIf="nullSurname">
+                Sobrenome é obrigatório
+            </div>
+
+            <p><label for="surname"> CPF: </label>
+                <input class="input" type="text" value="" id="cpf" placeholder="xxx.xxx.xxx-xx" name="cpf"
+                    [(ngModel)]="user.cpf" required><p>
+            <div *ngIf="nullCpf">
+                Cpf é obrigatório
+            </div>
+            <label for="pass"> Senha: </label>
+            <input class="input" type="password" value="" id="pass" placeholder="*******" name="pass"
+                [(ngModel)]="user.pass" required></p> 
+                <div *ngIf="nullPassword">
+                    Senha é obrigatória
+                </div>
+            <button class="btn" type="submit" (click)="onClickSubmit()">Cadastrar</button>
+            <input class="btn" type="button" value="Cancelar">
+        </div>
+    </form>
+</section>

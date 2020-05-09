@@ -1,0 +1,60 @@
+h1
+ {
+    font: normal 30pt Arial;
+    text-align: center;
+}
+
+h2
+ {
+    font: normal 25pt Arial;
+    text-align: center;
+}
+
+h3
+ {
+    font: normal 20pt Arial;
+    text-align: center;
+}
+
+p{
+    font: normal 13pt Arial;
+    
+}
+
+section{
+    background-color: rgb(255, 255, 255);
+    width: fit-content;
+    border-radius: 10px;
+    padding: 8px;
+    padding-top: 1px;
+    box-shadow: 2px 2px 25px rgba(3, 3, 3, 0.171);
+    position: relative;
+}
+
+.ng-invalid.ng-touched:not(form) {
+    border: 1px solid red;
+}
+
+.container {
+    max-width: 420px;
+	height: fit-content;
+	margin: 0 auto;
+	display: flex;
+	border: 1px solid rgba(204, 204, 204, 0.753);
+}
+
+.btn {
+    border-radius: 7px;
+    border-color: rgba(255, 255, 255, 0);
+    background-color: rgb(235, 242, 245);
+    box-shadow: 1px 1px 10px red($color: #00000009);
+    margin: 5px;
+    font: bold 10pt Arial;
+
+}
+
+.input{
+    border: none;
+    border-bottom-style: inset;
+}
+
