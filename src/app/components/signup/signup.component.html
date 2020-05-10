@@ -3,32 +3,33 @@
     <form #f="ngForm" (ngSubmit)="onSubmit(f)">
         <div id="signup">
             <p><label for="name"> Primeiro nome: </label>
-                <input class="input" type="text" value="" id="name" placeholder="Digite seu nome" name="name"
-                    minlength="3" [ngModel]="user.name" required #name="ngModel"></p>
+                <input class="input" type="text" value="" id="name" placeholder="Digite seu nome"  name="name"
+                    minlength="3" [ngModel]="user.name" required #name="ngModel" autocomplete="off"></p>
             <!--div>
                         Created to see the content
                         {{ nome.className }}
                     </div-->
+
             <div *ngIf="!name.valid && name.touched">
                 Nome é obrigatório e necessita ter pelo menos 3 caracteres.
             </div>
 
             <p><label for="surname"> Sobrenome: </label>
                 <input class="input" type="text" value="" id="surname" placeholder="Digite seu sobrenome" name="surname"
-                    minlength="3" [ngModel]="user.surname" required #surname="ngModel" ></p>
+                    minlength="3" [ngModel]="user.surname" autocomplete="off" required #surname="ngModel"></p>
             <div *ngIf="!surname.valid && surname.touched ">
                 Sobrenome é obrigatório e necessita ter pelo menos 3 caracteres
             </div>
 
             <p><label for="surname"> CPF: </label>
                 <input class="input" type="text" value="" id="cpf" placeholder="xxx.xxx.xxx-xx" name="cpf"
-                    [ngModel]="user.cpf" required #cpf="ngModel" mask="000.000.000-99"/></p>
+                    [ngModel]="user.cpf" autocomplete="off" required #cpf="ngModel" mask="000.000.000-99" /></p>
             <div *ngIf="!cpf.valid && cpf.touched">
                 Cpf é obrigatório
             </div>
             <p><label for="pass"> Senha: </label>
                 <input class="input" type="password" value="" id="pass" placeholder="*******" name="pass"
-                    [ngModel]="user.pass" required #password="ngModel"></p>
+                    [ngModel]="user.pass" autocomplete="off" required #password="ngModel"></p>
             <div *ngIf="!password.valid && password.touched">
                 Senha é obrigatória
             </div>
