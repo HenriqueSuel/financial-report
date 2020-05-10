@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupFormModule } from './components/signup/signup-form.module';
+import { NgxMaskModule, IConfig } from 'ngx-mask'
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SignupFormModule } from './components/signup/signup-form.module';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    SignupFormModule
+    SignupFormModule,
+    NgxMaskModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
