@@ -15,7 +15,7 @@
 
             <p><label for="surname"> Sobrenome: </label>
                 <input class="input" type="text" value="" id="surname" placeholder="Digite seu sobrenome" name="surname"
-                    minlength="3" [ngModel]="user.surname" required #surname="ngModel"></p>
+                    minlength="3" [ngModel]="user.surname" required #surname="ngModel" ></p>
             <div *ngIf="!surname.valid && surname.touched ">
                 Sobrenome é obrigatório e necessita ter pelo menos 3 caracteres
             </div>
