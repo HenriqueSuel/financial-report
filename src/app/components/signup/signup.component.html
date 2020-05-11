@@ -1,58 +1,67 @@
-<h1>Página de cadastro</h1>
-<section class="container">
-    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
-        <div id="signup">
-            <p><label for="name"> Primeiro nome: </label>
-                <input class="input" type="text" value="" id="name" placeholder="Digite seu nome" name="name"
-                    minlength="3" [ngModel]="user.name" required #name="ngModel" autocomplete="off" pattern="[a-zA-Z]+"></p>
-            <!--div>
+<div class="wrapper">
+    <div class="container">
+        <h1>Página de cadastro</h1>
+
+        <section>
+            <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+                <div id="signup">
+                    <p><label for="name"> Primeiro nome: </label>
+                        <input class="input" type="text" value="" id="name" placeholder="Digite seu nome" name="name"
+                            minlength="3" [ngModel]="user.name" required #name="ngModel" autocomplete="off"
+                            pattern="[a-zA-Z]+">
+                    </p>
+                    <!--div>
                         Created to see the content
                         {{ nome.className }}
                     </div-->
 
-            <div *ngIf="!name.valid && name.touched">
-                Nome é obrigatório.
-            </div>
-            <div *ngIf="!name.valid && name.touched && name.errors.minlength">
-                Nome deve conter ao menos 3 caracteres.
-            </div>
-            <div *ngIf="!name.valid && name.touched && name.errors.pattern">
-                Nome não pode conter caracteres numéricos.
-            </div>
-    
-            <p><label for="surname"> Sobrenome: </label>
-                <input class="input" type="text" value="" id="surname" placeholder="Digite seu sobrenome" name="surname"
-                    minlength="3" [ngModel]="user.surname" autocomplete="off" required #surname="ngModel"></p>
-            <div *ngIf="!surname.valid && surname.touched ">
-                Sobrenome é obrigatório e necessita ter pelo menos 3 caracteres
-            </div>
+                    <div *ngIf="!name.valid && name.touched">
+                        Nome é obrigatório.
+                    </div>
+                    <div *ngIf="!name.valid && name.touched && name.errors.minlength">
+                        Nome deve conter ao menos 3 caracteres.
+                    </div>
+                    <div *ngIf="!name.valid && name.touched && name.errors.pattern">
+                        Nome não pode conter caracteres numéricos.
+                    </div>
 
-            <p><label for="surname"> CPF: </label>
-                <input class="input" type="text" value="" id="cpf" placeholder="xxx.xxx.xxx-xx" name="cpf"
-                    [ngModel]="user.cpf" autocomplete="off" required #cpf="ngModel" mask="000.000.000-99" /></p>
-            <div *ngIf="!cpf.valid && cpf.touched">
-                Cpf é obrigatório
-            </div>
-            <p><label for="pass"> Senha: </label>
-                <input class="input" type="password" value="" id="pass" placeholder="*******" name="pass"
-                    [ngModel]="user.pass" autocomplete="off" required #password="ngModel"></p>
-            <div *ngIf="!password.valid && password.touched">
-                Senha é obrigatória
-            </div>
-            <button class="btn">Cadastrar</button>
-            <input class="btn" type="button" value="Cancelar">
-        </div>
-    </form>
-    <ul class="bg-bubbles">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
-</section>
+                    <p><label for="surname"> Sobrenome: </label>
+                        <input class="input" type="text" value="" id="surname" placeholder="Digite seu sobrenome"
+                            name="surname" minlength="3" [ngModel]="user.surname" autocomplete="off" required
+                            #surname="ngModel"></p>
+                    <div *ngIf="!surname.valid && surname.touched ">
+                        Sobrenome é obrigatório e necessita ter pelo menos 3 caracteres
+                    </div>
+
+                    <p><label for="surname"> CPF: </label>
+                        <input class="input" type="text" value="" id="cpf" placeholder="xxx.xxx.xxx-xx" name="cpf"
+                            [ngModel]="user.cpf" autocomplete="off" required #cpf="ngModel" mask="000.000.000-99" /></p>
+                    <div *ngIf="!cpf.valid && cpf.touched">
+                        Cpf é obrigatório
+                    </div>
+                    <p><label for="pass"> Senha: </label>
+                        <input class="input" type="password" value="" id="pass" placeholder="*******" name="pass"
+                            [ngModel]="user.pass" autocomplete="off" required #password="ngModel"></p>
+                    <div *ngIf="!password.valid && password.touched">
+                        Senha é obrigatória
+                    </div>
+                    <button class="btn">Cadastrar</button>
+                    <input class="btn" type="button" value="Cancelar">
+                </div>
+                <ul class="bg-bubbles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </form>
+        </section>
+
+    </div>
+</div>
