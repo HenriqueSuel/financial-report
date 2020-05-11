@@ -3,17 +3,23 @@
     <form #f="ngForm" (ngSubmit)="onSubmit(f)">
         <div id="signup">
             <p><label for="name"> Primeiro nome: </label>
-                <input class="input" type="text" value="" id="name" placeholder="Digite seu nome"  name="name"
-                    minlength="3" [ngModel]="user.name" required #name="ngModel" autocomplete="off"></p>
+                <input class="input" type="text" value="" id="name" placeholder="Digite seu nome" name="name"
+                    minlength="3" [ngModel]="user.name" required #name="ngModel" autocomplete="off" pattern="[a-zA-Z]+"></p>
             <!--div>
                         Created to see the content
                         {{ nome.className }}
                     </div-->
 
             <div *ngIf="!name.valid && name.touched">
-                Nome é obrigatório e necessita ter pelo menos 3 caracteres.
+                Nome é obrigatório.
             </div>
-
+            <div *ngIf="!name.valid && name.touched && name.errors.minlength">
+                Nome deve conter ao menos 3 caracteres.
+            </div>
+            <div *ngIf="!name.valid && name.touched && name.errors.pattern">
+                Nome não pode conter caracteres numéricos.
+            </div>
+    
             <p><label for="surname"> Sobrenome: </label>
                 <input class="input" type="text" value="" id="surname" placeholder="Digite seu sobrenome" name="surname"
                     minlength="3" [ngModel]="user.surname" autocomplete="off" required #surname="ngModel"></p>

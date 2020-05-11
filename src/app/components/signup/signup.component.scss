@@ -1,24 +1,5 @@
-h1
- {
-    font: normal 30pt Arial;
+h1,h2,h3,p{
     text-align: center;
-}
-
-h2
- {
-    font: normal 25pt Arial;
-    text-align: center;
-}
-
-h3
- {
-    font: normal 20pt Arial;
-    text-align: center;
-}
-
-p{
-    font: normal 13pt Arial;
-    
 }
 
 section{
@@ -49,8 +30,9 @@ section{
     background-color: rgb(235, 242, 245);
     box-shadow: 1px 1px 10px red($color: #00000009);
     margin: 5px;
-    font: bold 10pt Arial;
-
+    display: flex;
+    flex-direction: column;
+    
 }
 
 .input{
