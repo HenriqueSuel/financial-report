@@ -1,4 +1,0 @@
-
-
-Ex: Componente de banner -  Esse componente deve aparecer na pagina home e no login.
-Entao eu crio ele aqui e importo ele nas paginas corretas.
