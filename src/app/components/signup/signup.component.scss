@@ -4,7 +4,7 @@ h1,h2,h3,p{
 
 
 .ng-invalid.ng-touched:not(form) {
-    border: 1px solid red;
+    border: 3px solid red;
 }
 
 .bg-bubbles {
@@ -101,6 +101,55 @@ h1,h2,h3,p{
     }
   }
 
+  .grid{
+    display: grid;
+  }
+
+  .item{
+    margin: 5px;
+    text-align: center;
+  }
+
+  .grid-template-columns{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cadBtn{
+    text-align: right;
+    margin-right: 20px;
+    margin-top: 10px;
+    .button{
+      appearance: none;
+          outline: 0;
+          border: 0;
+          padding: 10px 10px;
+          border-radius: 3px;
+          width: 100px;
+          cursor: pointer;
+          transition-duration: 0.25s;
+    }
+}
+  .canBtn{
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 10px;
+      .button{
+        appearance: none;
+            outline: 0;
+            border: 0;
+            padding: 10px 10px;
+            border-radius: 3px;
+            width: 100px;
+            cursor: pointer;
+            transition-duration: 0.25s;
+      }
+  }
+
+  .rows{
+    grid-template-rows: 50px 50px 50px;
+  }
+
   .container {
     background: #fc5145;
     background: linear-gradient(to top left, #f7b758 0%, #fa1919bb 100%);
@@ -112,41 +161,4 @@ h1,h2,h3,p{
     overflow: hidden;
 }
 
-.card {
-    max-width: 600px;
-    margin: 0 auto;
-    height: 400px;
-    text-align: center;
-    &__header {
-        padding: 20px 0;
-        h1 {
-            font-size: 40px;
-            font-weight: 200;
-        }
-    }
-    &__body {
-        .form {
-            &_group {
-                padding: 5px 0;
-            }
-        }
-    }
-    &__footer {
-        margin-top: 20px;
-        button {
-            appearance: none;
-            outline: 0;
-            border: 0;
-            padding: 10px 15px;
-            border-radius: 3px;
-            width: 250px;
-            cursor: pointer;
-            font-size: 18px;
-            transition-duration: 0.25s;
-        }
-        button:disabled {
-            cursor: not-allowed;
-        }
-    }
-}
 
